@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТУДИЯ ’48 — Каталог</title>
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="container">
+            <!-- HEADER -->
+            <header class="header">
+                <a href="index.html" class="logo">СТУДИЯ ’48</a>
+                <nav class="nav">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html" class="active">Каталог</a>
+                    <a href="custom-order.html">Под заказ</a>
+                </nav>
+                <div class="header-icons">
+                    
+                    <a href="cart.html" class="cart-icon-link">
+                        <img src="images/cart.svg" alt="Корзина" class="icon-img">
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- MAIN -->
+            <main>
+                <!-- Хлебные крошки -->
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a> / <span>Каталог</span>
+                </div>
+
+                <!-- Заголовок страницы -->
+                <div class="catalog-header">
+                    <h1 class="page-title">КАТАЛОГ</h1>
+                    <span class="page-subtitle">пополняем каждую неделю</span>
+                </div>
+
+                <!-- Блок жанров -->
+                <div class="genre-filters">
+                    <button class="filter-btn" data-filter="alternative">Альтернатива</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn" data-filter="jazz">Джаз</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn" data-filter="pop">Поп</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn" data-filter="funk-soul">Фанк-соул</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn" data-filter="rock">Рок</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn active" data-filter="all">Все товары</button>
+                </div>
+
+                <!-- Сетка товаров -->
+                <div class="catalog-grid">
+                    <!-- Карточка 1 -->
+                    <div class="product-card" data-genre="rock">
+                        <div class="product-status">NEW / ROCK</div>
+                        <img src="images/product1.jpg" alt="Coldplay Moon Music">
+                        <div class="product-title">Coldplay<br>Moon Music ’24<br>Оригинал</div>
+                        <div class="product-price">7599 р</div>
+                        <button class="product-btn" onclick="addToCart('coldplay')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 2 -->
+                    <div class="product-card" data-genre="jazz">
+                        <div class="product-status">NEW / JAZZ</div>
+                        <img src="images/product2.jpg" alt="Miles Davis Kind of Blue">
+                        <div class="product-title">Miles Davis<br>Kind of Blue<br>Оригинал</div>
+                        <div class="product-price">6599 р</div>
+                        <button class="product-btn" onclick="addToCart('miles')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 3 -->
+                    <div class="product-card" data-genre="rock">
+                        <div class="product-status">USED / ROCK</div>
+                        <img src="images/product3.jpg" alt="Queen A Night at the Opera">
+                        <div class="product-title">Queen<br>A Night at the Opera<br>Оригинал</div>
+                        <div class="product-price">8499 р</div>
+                        <button class="product-btn" onclick="addToCart('queen')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 4 -->
+                    <div class="product-card" data-genre="pop">
+                        <div class="product-status">PRE-ORDER / POP</div>
+                        <img src="images/product4.jpg" alt="Taylor Swift 1989">
+                        <div class="product-title">Taylor Swift<br>1989 (Taylor's Version)<br>Предзаказ</div>
+                        <div class="product-price">7999 р</div>
+                        <button class="product-btn" onclick="addToCart('taylor')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 5 -->
+                    <div class="product-card" data-genre="rock">
+                        <div class="product-status">NEW / ROCK</div>
+                        <img src="images/product5.jpg" alt="The Beatles Abbey Road">
+                        <div class="product-title">The Beatles<br>Abbey Road<br>Оригинал</div>
+                        <div class="product-price">8999 р</div>
+                        <button class="product-btn" onclick="addToCart('beatles')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 6 -->
+                    <div class="product-card" data-genre="pop">
+                        <div class="product-status">NEW / POP</div>
+                        <img src="images/product6.jpg" alt="Lana Del Rey Born to Die">
+                        <div class="product-title">Lana Del Rey<br>Born to Die<br>Оригинал</div>
+                        <div class="product-price">7299 р</div>
+                        <button class="product-btn" onclick="addToCart('lana')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 7 -->
+                    <div class="product-card" data-genre="pop">
+                        <div class="product-status">USED / POP</div>
+                        <img src="images/product7.jpg" alt="Britney Spears">
+                        <div class="product-title">Britney Spears<br>…Baby One More Time<br>Оригинал '99</div>
+                        <div class="product-price">5499 р</div>
+                        <button class="product-btn" onclick="addToCart('britney')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 8 -->
+                    <div class="product-card" data-genre="alternative">
+                        <div class="product-status">RESTOCK / ALT</div>
+                        <img src="images/product8.jpg" alt="Arctic Monkeys AM">
+                        <div class="product-title">Arctic Monkeys<br>AM<br>Переиздание</div>
+                        <div class="product-price">6899 р</div>
+                        <button class="product-btn" onclick="addToCart('arctic')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 9 -->
+                    <div class="product-card" data-genre="jazz">
+                        <div class="product-status">USED / JAZZ</div>
+                        <img src="images/product9.jpg" alt="Frank Sinatra">
+                        <div class="product-title">Frank Sinatra<br>Sinatra at the Sands<br>Оригинал '66</div>
+                        <div class="product-price">12999 р</div>
+                        <button class="product-btn" onclick="addToCart('sinatra')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 10 -->
+                    <div class="product-card" data-genre="pop">
+                        <div class="product-status">USED / POP</div>
+                        <img src="images/product10.jpg" alt="Adriano Celentano">
+                        <div class="product-title">Adriano Celentano<br>Il Ragazzo della Via Gluck<br>Итальянское издание</div>
+                        <div class="product-price">14999 р</div>
+                        <button class="product-btn" onclick="addToCart('celentano')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 11 -->
+                    <div class="product-card" data-genre="funk-soul">
+                        <div class="product-status">NEW / FUNK-SOUL</div>
+                        <img src="images/product11.jpg" alt="Prince Purple Rain">
+                        <div class="product-title">Prince<br>Purple Rain<br>Оригинал</div>
+                        <div class="product-price">7699 р</div>
+                        <button class="product-btn" onclick="addToCart('prince')">+</button>
+                    </div>
+                    
+                    <!-- Карточка 12 -->
+                    <div class="product-card" data-genre="funk-soul">
+                        <div class="product-status">PRE-ORDER / FUNK-SOUL</div>
+                        <img src="images/product12.jpg" alt="Amy Winehouse">
+                        <div class="product-title">Amy Winehouse<br>Back to Black<br>Deluxe-переиздание</div>
+                        <div class="product-price">8999 р</div>
+                        <button class="product-btn" onclick="addToCart('amy')">+</button>
+                    </div>
+                </div>
+
+                <!-- Кнопка внизу -->
+                <div class="catalog-bottom">
+                    <a href="custom-order.html" class="btn">Заказать пластинку</a>
+                </div>
+            </main>
+
+            <!-- ФУТЕР -->
+            <footer class="footer">
+                <div class="footer-row-1">
+                    <a href="index.html" class="footer-logo">СТУДИЯ ’48</a>
+                </div>
+                <div class="footer-row-2">
+                    <div class="footer-contacts">
+                        <p>Контакты для связи</p>
+                        <p>studio48@mail.ru</p>
+                        <p>+7 913 465 5555</p>
+                    </div>
+                    <div class="footer-address">
+                        <p>Адрес магазина:</p>
+                        <p>г. Санкт-Петербург,</p>
+                        <p>Загородный проспект, 11</p>
+                    </div>
+                    <div class="footer-social-links">
+                        <a href="#" class="footer-social-link">TELEGRAM</a>
+                        <a href="#" class="footer-social-link">VK</a>
+                    </div>
+                </div>
+                <div class="footer-row-3">
+                    <div class="footer-copyright"><p>© СТУДИЯ ‘48, 2025</p></div>
+                    <div class="footer-policy"><a href="#">Политика конфиденциальности</a></div>
+                    <div class="footer-agreement"><a href="#">Пользовательское соглашение</a></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/products.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/catalog.js"></script>
+</body>
+</html>

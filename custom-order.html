@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТУДИЯ ’48 — Под заказ</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/custom-order.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="container">
+            <!-- HEADER -->
+            <header class="header">
+                <a href="index.html" class="logo">СТУДИЯ ’48</a>
+                <nav class="main-nav">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="custom-order.html" class="active">Под заказ</a>
+                </nav>
+                <div class="header-icons">
+                    
+                    <a href="cart.html" class="cart-icon-link">
+                        <img src="images/cart.svg" alt="Корзина" class="icon-img">
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- MAIN -->
+            <main>
+                <!-- Хлебные крошки -->
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a> / <span>Под заказ</span>
+                </div>
+
+                <!-- Информационный блок -->
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-lg-6 mb-4 mb-lg-0 d-flex">
+                        <div class="info-block-left">
+                            <h1 class="info-title">НЕ НАШЛИ НУЖНУЮ ПЛАСТИНКУ?</h1>
+                            <p class="info-text">
+                                Найдём даже то, чего нет в каталоге.<br>
+                                Мы работаем с дистрибьюторами из Европы, США и Великобритании.<br>
+                                В базе — более 200 000 пластинок: новые релизы, переиздания, коллекционные издания.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="info-image">
+                            <img src="images/custom-order-info.jpg" alt="Пластинка под заказ" class="w-100">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Подзаголовок -->
+                <div class="text-center my-5">
+                    <span class="subtitle">Найдем любую пластинку под ваш запрос</span>
+                </div>
+                    
+                <!-- Форма заявки -->
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="form-image">
+                            <img src="images/custom-order-form.jpg" alt="Оставить заявку" class="w-100">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex flex-column justify-content-between">
+                        <div>
+                            <h2 class="form-title">ЛЮБАЯ ПЛАСТИНКА ПОД ЗАКАЗ</h2>
+                            <p class="form-subtitle">Оставьте заявку, мы свяжемся с вами в ближайшее время и ответим на все интересующие вас вопросы.</p>
+                        </div>
+                        
+                        <form id="customOrderForm">
+                            <div class="mb-3">
+                                <input type="text" id="nameInput" class="form-control form-control-custom" placeholder="Имя">
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <input type="email" id="emailInput" class="form-control form-control-custom" placeholder="E-mail">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" id="phoneInput" class="form-control form-control-custom" placeholder="+7 (000) 000-00-00">
+                                </div>
+                            </div>
+                            
+                            <!-- Чекбоксы — исправленная верстка -->
+                            <div class="custom-checkbox" id="consentCheckbox">
+                                <input class="form-check-input" type="checkbox" id="consentInput">
+                                <label class="form-check-label" for="consentInput">
+                                    Я согласен (-а) на <a href="#">обработку персональных данных</a> в соответствии с Политикой.
+                                </label>
+                            </div>
+                            <div class="custom-checkbox mb-4" id="marketingCheckbox">
+                                <input class="form-check-input" type="checkbox" id="marketingInput">
+                                <label class="form-check-label" for="marketingInput">
+                                    Я согласен (-а) на получение маркетинговых писем об акциях, специальных предложениях и новинках бренда.
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-custom w-100 w-md-auto">Оставить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+
+            <!-- ФУТЕР -->
+            <footer class="footer">
+                <div class="footer-row-1">
+                    <a href="index.html" class="footer-logo">СТУДИЯ ’48</a>
+                </div>
+                <div class="footer-row-2">
+                    <div class="footer-contacts">
+                        <p>Контакты для связи</p>
+                        <p>studio48@mail.ru</p>
+                        <p>+7 913 465 5555</p>
+                    </div>
+                    <div class="footer-address">
+                        <p>Адрес магазина:</p>
+                        <p>г. Санкт-Петербург,</p>
+                        <p>Загородный проспект, 11</p>
+                    </div>
+                    <div class="footer-social-links">
+                        <a href="#" class="footer-social-link">TELEGRAM</a>
+                        <a href="#" class="footer-social-link">VK</a>
+                    </div>
+                </div>
+                <div class="footer-row-3">
+                    <div class="footer-copyright"><p>© СТУДИЯ ‘48, 2025</p></div>
+                    <div class="footer-policy"><a href="#">Политика конфиденциальности</a></div>
+                    <div class="footer-agreement"><a href="#">Пользовательское соглашение</a></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/products.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/custom-order.js"></script>
+</body>
+</html>

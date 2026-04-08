@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТУДИЯ ’48 — Виниловый магазин</title>
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="container">
+            <!-- HEADER -->
+            <header class="header">
+                <a href="index.html" class="logo">СТУДИЯ ’48</a>
+                <nav class="nav">
+                    <a href="index.html" class="active">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="custom-order.html">Под заказ</a>
+                </nav>
+                <div class="header-icons">
+                    
+                    <a href="cart.html" class="cart-icon-link">
+                        <img src="images/cart.svg" alt="Корзина" class="icon-img">
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- MAIN -->
+            <main>
+                <!-- HERO -->
+                <section class="hero">
+                    <div class="hero-title">
+                        <h1>Студия<span class="shift-right">винила</span></h1>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/hero-image.jpg" alt="Винил">
+                    </div>
+                </section>
+
+                <!-- Жанры -->
+                <div class="genre-filters">
+                    <button class="filter-btn" onclick="window.location.href='catalog.html?genre=alternative'">Альтернатива</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn" onclick="window.location.href='catalog.html?genre=jazz'">Джаз</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn" onclick="window.location.href='catalog.html?genre=pop'">Поп</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn" onclick="window.location.href='catalog.html?genre=funk-soul'">Фанк-соул</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn" onclick="window.location.href='catalog.html?genre=rock'">Рок</button>
+                    <div class="filter-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                    <button class="filter-btn" onclick="window.location.href='catalog.html'">Все товары</button>
+                </div>
+
+                <!-- Хиты -->
+                <section class="featured">
+                    <div class="featured-header">
+                        <h2>Любовь с первой пластинки</h2>
+                        <span class="subtitle">их выбирают снова и снова</span>
+                    </div>
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-status">NEW / ROCK</div>
+                            <img src="images/product1.jpg" alt="Coldplay">
+                            <div class="product-title">Coldplay<br>Moon Music ’24<br>Оригинал</div>
+                            <div class="product-price">7599 р</div>
+                            <button class="product-btn" onclick="addToCart('coldplay')">+</button>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-status">NEW / JAZZ</div>
+                            <img src="images/product2.jpg" alt="Miles Davis">
+                            <div class="product-title">Miles Davis<br>Kind of Blue<br>Оригинал</div>
+                            <div class="product-price">6599 р</div>
+                            <button class="product-btn" onclick="addToCart('miles')">+</button>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-status">USED / ROCK</div>
+                            <img src="images/product3.jpg" alt="Queen">
+                            <div class="product-title">Queen<br>A Night at the Opera<br>Оригинал</div>
+                            <div class="product-price">8499 р</div>
+                            <button class="product-btn" onclick="addToCart('queen')">+</button>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-status">PRE-ORDER / POP</div>
+                            <img src="images/product4.jpg" alt="Taylor Swift">
+                            <div class="product-title">Taylor Swift<br>1989 (Taylor's Version)<br>Предзаказ</div>
+                            <div class="product-price">7999 р</div>
+                            <button class="product-btn" onclick="addToCart('taylor')">+</button>
+                        </div>
+                    </div>
+                    <div class="featured-bottom">
+                        <a href="catalog.html" class="btn">смотреть все</a>
+                    </div>
+                </section>
+
+                <!-- Табы -->
+                <div class="about-tabs">
+                    <div class="tabs-content">
+                        <div class="tabs-header">
+                            <button class="tab-btn active" data-tab="about">О НАС</button>
+                            <button class="tab-btn" data-tab="delivery">ДОСТАВКА</button>
+                            <button class="tab-btn" data-tab="order">ЗАКАЗ</button>
+                        </div>
+                        <div class="tab-text" id="tabText">Мы не просто магазин пластинок. Мы — команда меломанов, которые каждый день ищут музыку, способную тронуть вас. Наша коллекция собиралась годами: здесь и классика, которую знают все, и редкие издания, о которых мечтают коллекционеры. «СТУДИЯ ’48» родилась из любви к аналоговому звуку. Мы верим, что винил — это не просто формат. Это ритуал. Это момент, когда ты достаёшь пластинку из конверта, ставишь иглу и мир замирает. Мы здесь, чтобы вы нашли свою музыку. Ту самую, которая будет звучать в вашем доме снова и снова.</div>
+                    </div>
+                    <div class="tabs-image">
+                        <div class="tabs-decoration"><div class="triangle-right"></div><div class="triangle-right"></div></div>
+                        <span class="image-subtitle">мы источник вашего вдохновения</span>
+                        <img id="tabImage" src="images/about.jpg" alt="О нас">
+                    </div>
+                </div>
+
+                <!-- Новые поступления -->
+                <section class="new-arrivals">
+                    <div class="new-arrivals-left">
+                        <h2>НОВЫЕ<br>ПОСТУПЛЕНИЯ</h2>
+                        <a href="#" class="btn" id="openNewsModal">подписаться на новости</a>
+                    </div>
+                    <div class="new-arrivals-scroll">
+                        <div class="scroll-container">
+                            <div class="scroll-item"><img src="images/new1.jpg" alt="Новинка 1"></div>
+                            <div class="scroll-item"><img src="images/new2.jpg" alt="Новинка 2"></div>
+                            <div class="scroll-item"><img src="images/new3.jpg" alt="Новинка 3"></div>
+                            <div class="scroll-item"><img src="images/new4.jpg" alt="Новинка 4"></div>
+                            <div class="scroll-item"><img src="images/new5.jpg" alt="Новинка 5"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Заказ пластинки -->
+                <section class="custom-order">
+                    <div class="custom-order-header">
+                        <h2>НЕ НАШЛИ ЖЕЛАЕМУЮ ПЛАСТИНКУ?</h2>
+                        <a href="custom-order.html" class="btn">Заказать пластинку</a>
+                    </div>
+                    <p class="custom-order-text">Привезем по вашему заказу любую пластинку</p>
+                    <div class="custom-order-image">
+                        <img src="images/custom-order.jpg" alt="Заказ пластинки">
+                    </div>
+                </section>
+
+                <!-- Соцсети со Swiper -->
+                <section class="social">
+                    <div class="social-header">
+                        <h2>ЕЩЕ БОЛЬШЕ В НАШИХ СОЦИАЛЬНЫХ СЕТЯХ</h2>
+                        <span>@studio48</span>
+                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/social1.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social2.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social3.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social4.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social5.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social6.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social1.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social2.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social3.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social4.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social5.jpg" alt="Соцсети"></div>
+                            <div class="swiper-slide"><img src="images/social6.jpg" alt="Соцсети"></div>
+                        </div>
+                    </div>
+                    <div class="social-footer">
+                        <span class="subtitle">присоединяйся к нашему комьюнити</span>
+                    </div>
+                </section>
+            </main>
+
+            <!-- ФУТЕР -->
+            <footer class="footer">
+                <div class="footer-row-1">
+                    <a href="index.html" class="footer-logo">СТУДИЯ ’48</a>
+                </div>
+                <div class="footer-row-2">
+                    <div class="footer-contacts">
+                        <p>Контакты для связи</p>
+                        <p>studio48@mail.ru</p>
+                        <p>+7 913 465 5555</p>
+                    </div>
+                    <div class="footer-address">
+                        <p>Адрес магазина:</p>
+                        <p>г. Санкт-Петербург,</p>
+                        <p>Загородный проспект, 11</p>
+                    </div>
+                    <div class="footer-social-links">
+                        <a href="#" class="footer-social-link">TELEGRAM</a>
+                        <a href="#" class="footer-social-link">VK</a>
+                    </div>
+                </div>
+                <div class="footer-row-3">
+                    <div class="footer-copyright"><p>© СТУДИЯ ‘48, 2025</p></div>
+                    <div class="footer-policy"><a href="#">Политика конфиденциальности</a></div>
+                    <div class="footer-agreement"><a href="#">Пользовательское соглашение</a></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Модальное окно подписки (добавляем data-type="news") -->
+    <div class="modal-overlay" id="newsModal">
+        <div class="modal-container" data-type="news">
+            <button class="modal-close" id="closeNewsModal">✕</button>
+            <h2 class="modal-title-news">УЗНАВАЙ О НОВЫХ ПОСТУПЛЕНИЯХ ПЕРВЫМ!</h2>
+            <p class="modal-subtitle-news">Заполните форму и мы с удовольствием будем делиться своими интересными находками в мире винила!</p>
+            <form id="newsForm">
+                <input type="text" id="newsName" class="form-input-news" placeholder="Имя">
+                <input type="email" id="newsEmail" class="form-input-news" placeholder="E-mail">
+                <input type="text" id="newsGenre" class="form-input-news" placeholder="Интересующий жанр или исполнитель">
+                <div class="checkbox-group-news">
+                    <div class="checkbox-item-news" id="newsConsentCheckbox">
+                        <div class="checkbox-custom-news"></div>
+                        <span class="checkbox-text-news">Я согласен (-а) на <a href="#">обработку персональных данных</a> в соответствии с Политикой.</span>
+                    </div>
+                    <div class="checkbox-item-news" id="newsMarketingCheckbox">
+                        <div class="checkbox-custom-news"></div>
+                        <span class="checkbox-text-news">Я согласен (-а) на получение маркетинговых писем об акциях, специальных предложениях и новинках бренда.</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit-news">Подписаться</button>
+            </form>
+        </div>
+    </div>
+       <!-- Swiper JS (нужен для работы слайдера) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Общие скрипты -->
+     <script src="js/products.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <!-- Все скрипты для главной в одном файле -->
+    <script src="js/index.js"></script>
+</body>
+</html>

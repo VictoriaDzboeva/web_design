@@ -1,0 +1,203 @@
+/* ========== СТИЛИ ДЛЯ СТРАНИЦЫ "ПОД ЗАКАЗ" ========== */
+/* Сброс стилей Bootstrap для меню */
+.nav, .main-nav {
+    all: revert;
+}
+
+.main-nav {
+    display: flex;
+    gap: 64px;
+    margin-left: 35px;
+}
+
+.main-nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--brown-dark);
+    text-decoration: none;
+    background: none;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--brown-light);
+}
+
+/* Для футера */
+.footer a {
+    color: var(--brown-dark);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--brown-light);
+}
+
+/* Для ссылок в тексте (чекбоксы) */
+.checkbox-text-news a,
+.custom-checkbox .form-check-label a {
+    color: var(--brown-dark);
+    text-decoration: underline;
+}
+
+.checkbox-text-news a:hover,
+.custom-checkbox .form-check-label a:hover {
+    color: var(--brown-light);
+}
+
+/* ========== ОСТАЛЬНЫЕ СТИЛИ ========== */
+.info-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36px;
+    color: var(--brown-dark);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.info-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--brown-dark);
+    max-width: 500px;
+}
+
+/* Выравнивание левого блока по верхнему краю */
+.info-block-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.info-block-left .info-text {
+    margin-top: auto;
+}
+
+.form-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36px;
+    color: var(--brown-dark);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.form-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--brown-light);
+    margin-bottom: 32px;
+}
+
+/* Убираем скругление у картинок */
+.info-image img,
+.form-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Высота картинок на десктопе */
+@media (min-width: 992px) {
+    .info-image img,
+    .form-image img {
+        height: 500px;
+    }
+}
+
+/* Кастомные поля ввода */
+.form-control-custom {
+    height: 54px;
+    padding: 0 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: var(--brown-dark);
+    background-color: var(--bg-light);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px var(--brown-light), -2px -2px 4px #FFFFFF;
+}
+
+.form-control-custom:focus {
+    box-shadow: 0px 0px 4px var(--brown-light);
+    outline: none;
+    background-color: var(--bg-light);
+}
+
+.form-control-custom.error {
+    box-shadow: 0px 0px 4px var(--orange-accent);
+    border: 1px solid var(--orange-accent);
+}
+
+/* УДАЛЁН БЛОК .form-control-custom.success (не используется) */
+
+/* Кнопка */
+.btn-custom {
+    background-color: var(--bg-light);
+    border: 1px solid var(--brown-dark);
+    border-radius: 30px;
+    padding: 16px 48px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--brown-dark);
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--brown-dark);
+    color: var(--bg-light);
+}
+
+/* Чекбоксы — исправляем выравнивание */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.custom-checkbox .form-check-input {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--brown-light);
+    background-color: var(--bg-light);
+    margin: 0 12px 0 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Убираем синюю подсветку Bootstrap у чекбоксов */
+.custom-checkbox .form-check-input:focus {
+    box-shadow: none;
+    border-color: var(--brown-light);
+    outline: none;
+}
+
+.custom-checkbox .form-check-input:checked {
+    background-color: var(--brown-light);
+    border-color: var(--brown-light);
+}
+
+.custom-checkbox .form-check-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: var(--brown-dark);
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.custom-checkbox .form-check-input.error {
+    box-shadow: 0px 0px 4px var(--orange-accent);
+    border: 1px solid var(--orange-accent);
+}

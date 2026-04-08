@@ -1,0 +1,35 @@
+/* ========== СТИЛИ ДЛЯ СТРАНИЦЫ КАТАЛОГА ========== */
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 64px;
+}
+
+/* Используем универсальные классы из base.css */
+.catalog-header .page-title {
+    margin: 0;
+}
+
+/* GRID сетка для каталога */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 64px 20px;
+    margin-bottom: 64px;
+}
+
+.catalog-grid .product-card {
+    width: 100%;
+}
+
+.catalog-bottom {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+/* Скрытые карточки при фильтрации */
+.catalog-grid .product-card[style*="display: none"] {
+    display: none !important;
+}

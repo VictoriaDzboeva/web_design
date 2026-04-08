@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СТУДИЯ ’48 — Корзина</title>
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Стили -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="container">
+            <!-- HEADER -->
+            <header class="header">
+                <a href="index.html" class="logo">СТУДИЯ ’48</a>
+                <nav class="nav">
+                    <a href="index.html">Главная</a>
+                    <a href="catalog.html">Каталог</a>
+                    <a href="custom-order.html">Под заказ</a>
+                </nav>
+                <div class="header-icons">
+                    
+                    <a href="cart.html" class="cart-icon-link">
+                        <img src="images/cart.svg" alt="Корзина" class="icon-img">
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- MAIN -->
+            <main>
+                <!-- Хлебные крошки -->
+                <div class="breadcrumbs">
+                    <a href="index.html">Главная</a> / <span>Корзина</span>
+                </div>
+
+                <!-- Заголовок -->
+                <div class="cart-header">
+                    <h1 class="page-title">Ваша корзина</h1>
+                </div>
+
+                <!-- Контейнер для корзины -->
+                <div id="cartContainer">
+                    <!-- Сюда будет динамически подставляться содержимое корзины -->
+                </div>
+            </main>
+
+            <!-- ФУТЕР -->
+            <footer class="footer">
+                <div class="footer-row-1">
+                    <a href="index.html" class="footer-logo">СТУДИЯ ’48</a>
+                </div>
+                <div class="footer-row-2">
+                    <div class="footer-contacts">
+                        <p>Контакты для связи</p>
+                        <p>studio48@mail.ru</p>
+                        <p>+7 913 465 5555</p>
+                    </div>
+                    <div class="footer-address">
+                        <p>Адрес магазина:</p>
+                        <p>г. Санкт-Петербург,</p>
+                        <p>Загородный проспект, 11</p>
+                    </div>
+                    <div class="footer-social-links">
+                        <a href="#" class="footer-social-link">TELEGRAM</a>
+                        <a href="#" class="footer-social-link">VK</a>
+                    </div>
+                </div>
+                <div class="footer-row-3">
+                    <div class="footer-copyright"><p>© СТУДИЯ ‘48, 2025</p></div>
+                    <div class="footer-policy"><a href="#">Политика конфиденциальности</a></div>
+                    <div class="footer-agreement"><a href="#">Пользовательское соглашение</a></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Модальное окно для успешного заказа -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-container" data-type="success">
+            <div class="modal-icon">✓</div>
+            <h2 class="modal-title">ВАШ ЗАКАЗ<br>УСПЕШНО ОФОРМЛЕН</h2>
+            <p class="modal-text">Спасибо, что выбрали студию винила '48!</p>
+            <a href="index.html" class="modal-btn">Главная</a>
+        </div>
+    </div>
+    <script src="js/products.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

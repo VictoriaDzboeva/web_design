@@ -1,0 +1,89 @@
+/* ========== RESET & БАЗОВЫЕ СТИЛИ ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== ПЕРЕМЕННЫЕ ЦВЕТОВ ========== */
+:root {
+    --bg-light: #FBF7F4;
+    --brown-dark: #6C4D38;
+    --brown-light: #D3BAA9;
+    --orange-accent: #F06D3A;
+    --white: #FFFFFF;
+}
+
+/* ========== ПОДКЛЮЧЕНИЕ ШРИФТОВ ========== */
+@font-face {
+    font-family: 'Kalissa Regular';
+    src: url('../fonts/Kalissa-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ========== ОБЩИЕ СТИЛИ ========== */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--brown-dark);
+}
+
+.site-wrapper {
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+/* ========== ТИПОГРАФИКА ========== */
+.subtitle {
+    font-family: 'Kalissa Regular', 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--orange-accent);
+}
+
+/* ========== ХЛЕБНЫЕ КРОШКИ ========== */
+.breadcrumbs {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: var(--brown-dark);
+}
+
+.breadcrumbs a {
+    color: var(--brown-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: var(--brown-light);
+}
+
+.breadcrumbs span {
+    color: var(--brown-light);
+}
+
+/* ========== УНИВЕРСАЛЬНЫЙ ЗАГОЛОВОК СТРАНИЦЫ ========== */
+.page-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--brown-dark);
+    text-transform: uppercase;
+}
+
+.page-subtitle {
+    font-family: 'Kalissa Regular', 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--orange-accent);
+}
